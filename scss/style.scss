@@ -1,4 +1,73 @@
-h1{
-   font-size: 30px;
-   color: blue;
+@import 'normolize.scss';
+
+// Mixins
+@mixin font-lato {
+   font-family: "Lato", sans-serif;
+}
+@mixin font-montserrat {
+   font-family: "Montserrat", sans-serif;
+}
+//  --Mixins--
+
+body{
+   @include font-lato();
+}
+
+.section-outer {}
+.section-inner{ width: 1180px; margin: 0 auto;}
+.section-header {
+   color: white;
+   background: url(/img/bg-header.jpg) no-repeat 50% 50%;
+   background-size: cover;
+
+   .section-inner {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &-logo {
+      font-weight: bold;
+      font-size: 24px;
+      flex-shrink: 1;
+   }
+   &-content {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+   }
+   &-wrapper {
+      &__title{
+         text-align: center;
+         font-weight: bold;
+         font-size: 56px;
+         line-height: 60px;
+      }
+      &__subtitle{
+         @include font-montserrat();
+         text-align: center;
+         font-size: 18px;
+         line-height: 32px;
+      }
+      &__form{
+         display: flex;
+         &-input{}
+         &-button{}
+      }
+
+   }
+}
+.section-header-content {
+}
+.section-header-wrapper {
+}
+.section-header-wrapper__title {
+}
+.section-header-wrapper__subtitle {
+}
+.section-header-wrapper__form {
+}
+.section-header-wrapper__form-input {
+}
+.section-header-wrapper__form-button {
 }
