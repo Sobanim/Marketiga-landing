@@ -12,6 +12,9 @@
 body{
    @include font-lato();
 }
+*{
+   box-sizing: border-box;
+}
 
 .section-outer {}
 .section-inner{ width: 1180px; margin: 0 auto;}
@@ -30,6 +33,7 @@ body{
       font-weight: bold;
       font-size: 24px;
       flex-shrink: 1;
+      padding-top: 35px;
    }
    &-content {
       flex-grow: 1;
@@ -37,37 +41,59 @@ body{
       align-items: center;
    }
    &-wrapper {
+      margin: 0 auto;
       &__title{
          text-align: center;
          font-weight: bold;
          font-size: 56px;
          line-height: 60px;
+         margin-bottom: 16px;
       }
       &__subtitle{
          @include font-montserrat();
          text-align: center;
          font-size: 18px;
          line-height: 32px;
+         margin: 0 auto 44px;
+         width: 80%;
       }
       &__form{
          display: flex;
-         &-input{}
-         &-button{}
+         &-input{
+            flex-grow: 1;
+            padding-right: 40px;
+            input{
+               @include font-montserrat();
+               border: none;
+               background: rgba(255, 255, 255, .25) ;
+               color: white;
+               font-size: 16px;
+               margin: 0;
+               padding: 16px 20px;
+               outline: none;
+               border-radius: 4px;
+               width: 100%;
+
+               &::placeholder{
+                  color: white;
+               }
+            }
+         }
+         &-button{
+            button{
+               @include font-montserrat();
+               font-size: 18px;
+               margin: 0;
+               padding: 16px 20px;
+               color: white;
+               border: none;
+               background: linear-gradient(to right, #FE985B, #FE4FA7);
+               outline: none;
+               border-radius: 4px;
+            }
+         }
       }
 
    }
 }
-.section-header-content {
-}
-.section-header-wrapper {
-}
-.section-header-wrapper__title {
-}
-.section-header-wrapper__subtitle {
-}
-.section-header-wrapper__form {
-}
-.section-header-wrapper__form-input {
-}
-.section-header-wrapper__form-button {
-}
+
