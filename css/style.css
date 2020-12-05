@@ -368,6 +368,41 @@ body {
   color: #6c6c6c;
 }
 
+.btn-main {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 16px 20px;
+  color: white;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#fe985b), to(#fe4fa7));
+  background: linear-gradient(to right, #fe985b, #fe4fa7);
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: linear-gradient(to right, #fe985b, #fe4fa7);
+}
+
+.btn-secondary {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 16px 20px;
+  color: white;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#fe985b), to(#fe4fa7));
+  background: linear-gradient(to right, #fe985b, #fe4fa7);
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid #414141;
+  background: white;
+  color: #414141;
+}
+
 .section-inner {
   width: 1180px;
   margin: 0 auto;
@@ -473,19 +508,6 @@ body {
   color: white;
 }
 
-.section-header-wrapper__form-button button {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  margin: 0;
-  padding: 16px 20px;
-  color: white;
-  border: none;
-  background: -webkit-gradient(linear, left top, right top, from(#FE985B), to(#FE4FA7));
-  background: linear-gradient(to right, #FE985B, #FE4FA7);
-  outline: none;
-  border-radius: 4px;
-}
-
 .section-promo {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -534,5 +556,115 @@ body {
 
 .section-promo2 .description-item + .description-item {
   margin-left: 40px;
+}
+
+.section-founder {
+  background-color: #f6fafd;
+  padding-top: 34px;
+}
+
+.section-founder .section-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-founder__img {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.section-founder__content {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 50px;
+}
+
+.section-founder__content-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.section-founder__content-name {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: bold;
+}
+
+.section-founder__content-post {
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.section-plans {
+  padding: 120px 0;
+  text-align: center;
+}
+
+.section-plans__title {
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: bold;
+}
+
+.section-plans__subtitle {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  margin-bottom: 110px;
+  width: 50%;
+  margin: 0 auto 80px;
+}
+
+.section-plans__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-plans__list-item {
+  -ms-flex-preferred-size: 370px;
+      flex-basis: 370px;
+  padding: 60px 45px;
+}
+
+.section-plans__list-item_title {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.section-plans__list-item_price {
+  margin-bottom: 26px;
+}
+
+.section-plans__list-item_price .prefix {
+  color: #fe4fa7;
+  font-size: 72px;
+  line-height: 86px;
+  font-weight: bold;
+}
+
+.section-plans__list-item_price .postfix {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: bold;
+}
+
+.section-plans__list-item_description {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  margin-bottom: 45px;
+}
+
+.section-plans__list-item.active {
+  background-color: #f6fafd;
 }
 /*# sourceMappingURL=style.css.map */

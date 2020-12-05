@@ -1,4 +1,4 @@
-@import 'normolize.scss';
+@import "normolize.scss";
 
 // Mixins
 @mixin font-lato {
@@ -10,24 +10,24 @@
 //  --Mixins--
 
 // --Common--
-body{
+body {
    @include font-lato();
 }
-*{
+* {
    box-sizing: border-box;
 }
 
-.description-item{
-   &__icon{
+.description-item {
+   &__icon {
       margin-bottom: 20px;
    }
-   &__title{
+   &__title {
       margin-bottom: 14px;
       font-size: 18px;
       line-height: 22px;
       font-weight: bold;
    }
-   &__text{
+   &__text {
       font-size: 16px;
       line-height: 28px;
       font-weight: 300;
@@ -35,10 +35,43 @@ body{
    }
 }
 
+@mixin start-button {
+   @include font-montserrat();
+   font-size: 18px;
+   margin: 0;
+   padding: 16px 20px;
+   color: white;
+   border: none;
+   background: linear-gradient(to right, #fe985b, #fe4fa7);
+   outline: none;
+   border-radius: 4px;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+.btn-main {
+   @include start-button();
+
+   border: none;
+   background: linear-gradient(to right, #fe985b, #fe4fa7);
+}
+.btn-secondary {
+   @include start-button();
+
+   border: 1px solid #414141;
+   background: white;
+   color: #414141;
+
+}
+
 // --/Common--
 
-.section-outer {}
-.section-inner{ width: 1180px; margin: 0 auto;}
+.section-outer {
+}
+.section-inner {
+   width: 1180px;
+   margin: 0 auto;
+}
 
 .section-header {
    color: white;
@@ -64,14 +97,14 @@ body{
    }
    &-wrapper {
       margin: 0 auto;
-      &__title{
+      &__title {
          text-align: center;
          font-weight: bold;
          font-size: 56px;
          line-height: 60px;
          margin-bottom: 16px;
       }
-      &__subtitle{
+      &__subtitle {
          @include font-montserrat();
          text-align: center;
          font-size: 18px;
@@ -79,15 +112,15 @@ body{
          margin: 0 auto 44px;
          width: 80%;
       }
-      &__form{
+      &__form {
          display: flex;
-         &-input{
+         &-input {
             flex-grow: 1;
             padding-right: 40px;
-            input{
+            input {
                @include font-montserrat();
                border: none;
-               background: rgba(255, 255, 255, .25) ;
+               background: rgba(255, 255, 255, 0.25);
                color: white;
                font-size: 16px;
                margin: 0;
@@ -96,88 +129,153 @@ body{
                border-radius: 4px;
                width: 100%;
 
-               &::placeholder{
+               &::placeholder {
                   color: white;
                }
             }
          }
-         &-button{
-            button{
-               @include font-montserrat();
-               font-size: 18px;
-               margin: 0;
-               padding: 16px 20px;
-               color: white;
-               border: none;
-               background: linear-gradient(to right, #FE985B, #FE4FA7);
-               outline: none;
-               border-radius: 4px;
-            }
+         &-button {
          }
       }
-
    }
 }
 
-.section-promo{
+.section-promo {
    padding-top: 120px;
    padding-bottom: 120px;
 }
 
-.section-promo1{
+.section-promo1 {
    display: flex;
-   &__content, &__video{
+   &__content,
+   &__video {
       flex-basis: 50%;
    }
-   &__content{
+   &__content {
       padding-right: 90px;
-      .title{
+      .title {
          font-size: 32px;
          line-height: 51px;
          font-weight: bold;
          margin-bottom: 56px;
       }
-      .description-item__item{
+      .description-item__item {
          margin-top: 28px;
       }
    }
-   &__video{
-      img{
+   &__video {
+      img {
          width: 100%;
          height: auto;
       }
    }
-
 }
 
-.section-promo2{
+.section-promo2 {
    display: flex;
    padding-top: 86px;
    margin-top: 120px;
    border-top: 1px solid #e2e2e2;
    text-align: center;
 
-   &__item{
-
+   &__item {
    }
 
-   .description-item + .description-item{
+   .description-item + .description-item {
       margin-left: 40px;
    }
 }
 
-.section-founder{
-
+.section-founder {
+   background-color: #f6fafd;
+   padding-top: 34px;
+   .section-inner {
+      display: flex;
+   }
+   &__img {
+      align-self: flex-end;
+   }
+   &__content {
+      align-self: center;
+      padding-left: 50px;
+      &-text {
+         @include font-montserrat;
+         font-size: 24px;
+         line-height: 40px;
+      }
+      &-name {
+         font-size: 24px;
+         line-height: 29px;
+         font-weight: bold;
+      }
+      &-post {
+         font-size: 20px;
+         line-height: 29px;
+      }
+   }
 }
 
-.section-plans{
+.section-plans {
+   padding: 120px 0;
+   text-align: center;
 
+   &__title {
+      font-size: 36px;
+      line-height: 51px;
+      font-weight: bold;
+   }
+   &__subtitle {
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 300;
+      margin-bottom: 110px;
+      width: 50%;
+      margin: 0 auto 80px;
+   }
+   &__list {
+      display: flex;
+      justify-content: center;
+      &-item {
+         flex-basis: 370px;
+         padding: 60px 45px;
+         &_title {
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: bold;
+            text-transform: uppercase;
+         }
+         &_price {
+            margin-bottom: 26px;
+            .prefix {
+               color: #fe4fa7;
+               font-size: 72px;
+               line-height: 86px;
+               font-weight: bold;
+            }
+            .postfix {
+               font-size: 14px;
+               line-height: 17px;
+               font-weight: bold;
+            }
+         }
+         &_description {
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 300;
+            margin-bottom: 45px;
+         }
+         &_button {
+         }
+
+         &.active {
+            background-color: #f6fafd;
+         }
+      }
+   }
 }
 
-.section-free{
-
+.section-free {
 }
 
-.section-footer{
-
+.section-footer {
 }
